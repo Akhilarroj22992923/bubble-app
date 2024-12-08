@@ -1,120 +1,41 @@
-* {
+/* Body background and font */
+body {
+  background-color: #121212;
+  font-family: 'Arial', sans-serif;
+  color: #fff;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
-body {
-  background-color: black;
+/* Card Shadow for Professional Look */
+.card {
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
+  padding-top: 3rem; /* Increase spacing for top */
+  padding-bottom: 3rem; /* Increase spacing for bottom */
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* Header Styling */
+header {
+  display: flex;
+  justify-content: center;
+  background-color: #1a1a1a;
+  padding: 1rem 0;
+}
+
+header span {
+  font-size: 1.2rem;
+  font-weight: bold;
   color: white;
-  font-family: Arial, sans-serif;
-  overflow-x: hidden;
-}
-p h1 {
-  font-family: 'Arial', sans-serif; /* Example font-family */
-  font-size: 3rem; /* Example font size */
-  color: #ff8383; /* Example color */
-  text-align: center; /* Center the text */
-}
-p h3 {
-  font-family: 'Georgia', serif; /* Different font-family for h3 */
-  font-size: 1.5rem; /* Example font size */
-  /* color: #90ee90; Example color */
-  text-align: center; /* Center the text */
-}
-.app {
-  height: 100%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-}
-
-.header {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  padding: 20px;
-  position: absolute;
-  top: 0;
-}
-
-.logo {
-  font-size: 24px;
-}
-
-.nav {
-  display: flex;
-  gap: 30px;
-}
-
-/* Bubble animation container */
-.bubble-container {
-  position: relative;
-  height: 100vh; /* Full screen height for the homepage */
-  width: 100%;
-  display: flex;
-  justify-content: center;
   align-items: center;
 }
-
-/* Bubble styling */
-.bubble {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  background: url('./bubble.PNG') no-repeat center center;
-  background-size: contain;
-  position: absolute;
-  will-change: transform;
-}
-
-/* About Section */
-.about {
-  background-color: rgb(238, 255, 83);
-  color: black;
-  width: 100%;
-  height: 100vh; /* Full screen height */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 40px;
-}
-
-/* Services Section */
-.services {
-  background-color: lightblue;
-  color: white;
-  width: 100%;
-  height: 100vh; /* Full screen height */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 40px;
-}
-
-/* Footer Section */
-.footer {
-  background-color: black;
-  color: white;
-  width: 100%;
-  height: 100vh; /* Full screen height */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 40px;
-}
-/* Bubble styling */
-.bubble {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  background: url('./bubble.PNG') no-repeat center center;
-  background-size: contain;
-  position: absolute;
-  will-change: transform;
-  transition: width 0.2s ease-out, height 0.2s ease-out;
+header span:hover {
+  background-color: #333;
+  border-radius: 5px;
+  padding: 0.3rem 0.6rem;
 }
