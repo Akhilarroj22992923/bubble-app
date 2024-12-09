@@ -1,70 +1,89 @@
-# Getting Started with Create React App
+# Bubble Animation Website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a React-based interactive website featuring a floating bubble animation that reacts to the user's scroll and mouse movements. The bubble grows in size as the user scrolls down the page and bursts when reaching the footer. This project demonstrates a smooth animation using `react-spring` and customized CSS for animations.
 
-## Available Scripts
+## Features
 
-In the project directory, you can run:
+- **Floating Bubble**: The bubble floats around the screen as the user scrolls down.
+- **Scroll Interaction**: The bubble's size increases as the user scrolls down the page.
+- **Burst Effect**: When the user scrolls to the footer, the bubble bursts with a smooth animation.
+- **Mouse Interaction**: The bubble follows the mouse cursor when hovered over.
+- **Responsive**: The website is fully responsive and works on all screen sizes.
 
-### `npm start`
+## Technologies Used
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- **React**: A JavaScript library for building user interfaces.
+- **React Spring**: A spring-physics-based animation library for React.
+- **CSS**: For styling and animations.
+- **JavaScript**: For logic and event handling.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Project Setup
 
-### `npm test`
+Follow these steps to get the project up and running on your local machine.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Prerequisites
 
-### `npm run build`
+Ensure you have the following installed:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Node.js (v14 or later)
+- npm (v6 or later)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Installation
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+1. Clone the repository to your local machine:
 
-### `npm run eject`
+   ```bash
+   git clone https://github.com/your-username/bubble-animation-website.git
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+2. Navigate to the project directory:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+   ```bash
+   cd bubble-animation-website
+   ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+3. Install the required dependencies:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+   ```bash
+   npm install
+   ```
 
-## Learn More
+4. Start the development server:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+   ```bash
+   npm start
+   ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+   Your project should now be running at `http://localhost:3000`.
 
-### Code Splitting
+## Project Structure
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+The project is structured as follows:
 
-### Analyzing the Bundle Size
+```
+bubble-animation-website/
+│
+├── src/
+│   ├── App.js          # Main React component for the app
+│   ├── App.css         # Styling for the app (including bubble animation)
+|   ├── bubble.PNG      # Image of the bubble
+│   └── index.js        # Entry point for the React app
+│
+├── public/
+│   └── index.html      # HTML template for the app
+│
+└── package.json        # Project dependencies and scripts
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## How It Works
 
-### Making a Progressive Web App
+- **Bubble Animation**: The bubble is created as an `animated.div` component using `react-spring`. Its position is animated based on the user's scroll and mouse movements.
+- **Scroll Interaction**: The `handleScroll` function tracks the scroll position and moves the bubble accordingly. The bubble’s size increases as the user scrolls.
+- **Burst Effect**: When the user reaches the footer, the `setBurst(true)` triggers the burst animation, making the bubble shrink and disappear.
+- **Mouse Interaction**: The bubble follows the mouse pointer when hovered and moves responsively.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Customization
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **Bubble Image**: Replace the `bubble.PNG` file in the `public` folder with your own bubble image.
+- **Animation Speed**: You can adjust the `scrollY` multiplier in the `handleScroll` function to make the bubble move faster or slower.
+- **Bubble Size**: Modify the `newSize` calculation in `handleScroll` to control how large the bubble gets when the user scrolls.
